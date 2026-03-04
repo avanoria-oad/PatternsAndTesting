@@ -34,7 +34,7 @@ public abstract class RepositoryBase<TModel, TId, TEntity, TContext>(TContext co
         }
         catch (Exception ex)
         {
-            logger.Log(ex.ToString());
+            logger.Log(ex);
             throw;
         }
     }

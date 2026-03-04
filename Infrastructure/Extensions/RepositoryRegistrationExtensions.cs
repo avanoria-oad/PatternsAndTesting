@@ -4,17 +4,15 @@ using Microsoft.Extensions.Hosting;
 
 namespace Infrastructure.Extensions;
 
-public static class InfrastructureServiceCollectionRegistrationExtensions
+public static class RepositoryRegistrationExtensions
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration, IHostEnvironment env)
+    public static IServiceCollection AddRepositories(this IServiceCollection services, IConfiguration configuration, IHostEnvironment env)
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(configuration);
         ArgumentNullException.ThrowIfNull(env);
 
-        services.AddLogger(configuration, env);
-        services.AddPersistence(configuration, env);
-        services.AddRepositories(configuration, env);
+        
 
         return services;
     }

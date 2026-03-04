@@ -24,4 +24,12 @@ public sealed class Logger : ILogger
 
         File.AppendAllText(_logFilePath, formatted + Environment.NewLine);
     }
+
+    public void Log(Exception ex)
+    {
+        if (ex is null)
+            return;
+
+        Log(ex.ToString());
+    }
 }

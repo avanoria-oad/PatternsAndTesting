@@ -12,7 +12,7 @@ public static class ApplicationServiceCollectionRegistrationExtensions
         ArgumentNullException.ThrowIfNull(configuration);
         ArgumentNullException.ThrowIfNull(env);
 
-
+        services.AddServices();
 
         return services;
     }
